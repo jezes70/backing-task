@@ -19,8 +19,10 @@ RUN npm install -g typescript
 # Compile your TypeScript code
 RUN tsc
 
+CMD ["node", "dist/index.js"]
+
 # Expose the port your app listens on (if applicable)
 EXPOSE 3000
 
 # Define the command to run your Node.js application
-CMD ["node", "/dist/index.js"]
+
