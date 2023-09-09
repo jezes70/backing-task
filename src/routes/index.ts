@@ -2,6 +2,6 @@ import { Router } from "express";
 import { getSlackInfo } from "../controllers/slackInfoController";
 
 const router = Router();
-router.get("/slackInfo", getSlackInfo);
+router.get("/api", getSlackInfo);
 
 export default router;
