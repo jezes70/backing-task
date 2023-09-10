@@ -21,7 +21,7 @@ const getSlackInfo = (req, res) => __awaiter(void 0, void 0, void 0, function* (
     }
     const currentDate = new Date();
     const currentDay = "Sunday";
-    const utcTime = (0, date_fns_1.format)(currentDate, "EEEE");
+    const utcTime = (0, date_fns_1.format)(currentDate, "yyyy-MM-dd'T'HH:mm:ss'Z'");
     const response = {
         slack_name: slack_name,
         current_day: currentDay,
