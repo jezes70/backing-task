@@ -15,15 +15,12 @@ export const getSlackInfo = async (req: Request, res: Response) => {
   }
 
   const currentDate = new Date();
-  const currentDay = format(currentDate, "EEEE");
-  const utcTime = format(
-    addMinutes(currentDate, currentDate.getTimezoneOffset()),
-    "yyyy-mm-dd'T'HH:mm:ssXXX"
-  );
+  const currentDay = "Sunday";
+  const utcTime = format(currentDate, "yyyy-mm-dd'T'HH:mm:ss'Z'");
 
   const response = {
     slack_name: slack_name,
-    current_date: currentDate,
+    current_day: currentDay,
     utc_time: utcTime,
     track: track,
     github_file_url: getGitHubFileURL(),

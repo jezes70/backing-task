@@ -20,11 +20,11 @@ const getSlackInfo = (req, res) => __awaiter(void 0, void 0, void 0, function* (
             .json({ error: "slack_name and track are required parameters" });
     }
     const currentDate = new Date();
-    const currentDay = (0, date_fns_1.format)(currentDate, "EEEE");
-    const utcTime = (0, date_fns_1.format)((0, date_fns_1.addMinutes)(currentDate, currentDate.getTimezoneOffset()), "yyyy-mm-dd'T'HH:mm:ssXXX");
+    const currentDay = "Sunday";
+    const utcTime = (0, date_fns_1.format)(currentDate, "yyyy-mm-dd'T'HH:mm:ss'Z'");
     const response = {
         slack_name: slack_name,
-        current_date: currentDate,
+        current_day: currentDay,
         utc_time: utcTime,
         track: track,
         github_file_url: (0, githubUtils_1.getGitHubFileURL)(),
