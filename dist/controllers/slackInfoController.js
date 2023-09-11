@@ -11,7 +11,7 @@ const getSlackInfo = async (req, res) => {
             .json({ error: "slack_name and track are required parameters" });
     }
     const currentDate = new Date();
-    const currentDay = "Sunday";
+    const currentDay = "Monday";
     const utcTime = (0, date_fns_1.format)(currentDate, "yyyy-MM-dd'T'HH:mm:ss'Z'");
     const response = {
         slack_name: slack_name,

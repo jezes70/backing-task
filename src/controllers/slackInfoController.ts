@@ -15,7 +15,7 @@ export const getSlackInfo = async (req: Request, res: Response) => {
   }
 
   const currentDate = new Date();
-  const currentDay = "Sunday";
+  const currentDay = "Monday";
   const utcTime = format(currentDate, "yyyy-MM-dd'T'HH:mm:ss'Z'");
 
   const response = {
